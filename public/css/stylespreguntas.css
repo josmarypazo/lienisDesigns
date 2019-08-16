@@ -1,0 +1,96 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Open+Sans|Ubuntu&display=swap";
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Montserrat', 'Noto Sans', 'Ubuntu', sans-serif;
+}
+
+body {
+      background-image: url("../img/rectangular1.jpg");
+      display: flex;
+      justify-content: center;
+}
+
+.container{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.cabecera {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    color: RGB(46, 139, 87);
+    }
+
+  h1, .cabecera {
+     font-size: 15px;
+   color: RGB(46, 139, 87);
+ }
+
+   .volver-inicio {
+     display: inline-flex;
+     justify-content: flex-start;
+     align-self: flex-start;
+     align-items: flex-start;
+   }
+
+  .nav-login {
+  display: inline-flex;
+  width: 100%;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+    background-color: rgba(234, 250, 241, 0.43);
+    padding: 5px;
+        }
+
+.nav-login ul li:hover{
+  color: RGB(233, 247, 239);
+  background-color: rgb(125, 206, 160);
+          }
+
+.nav-login ul {
+  display: inline-flex;
+    }
+
+.nav-login ul li a, .main-nav ul li a{
+  color: RGB(46, 139, 87);
+}
+
+.nav-login ul li{
+  padding: 15px;
+  justify-content: center;
+    margin-right: 10px;
+  border-radius: 10%;
+    }
+
+.panel-group {
+  display: flex;
+  width: 100%;
+  color: RGB(46, 139, 87);
+  flex-direction: column;
+  justify-content:space-around;
+  flex-wrap: nowrap;
+  }
+
+  .panel-title, .panel-heading, .panel-body, .panel-collapse collapse  {
+  display: flex;
+  text-decoration: none;
+  color: RGB(46, 139, 87);
+  width: 100%;
+          }
+
+  .panel-title a:hover{
+  background-color: RGB(233, 247, 239);
+  padding: 5px;
+    }
+
+.unaPregunta {
+text-decoration: none;
+color: RGB(46, 139, 87);
+}
