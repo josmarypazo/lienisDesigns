@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
         }
 
         foreach ($shoppings_lists as $oneShoppingList) {
-          $oneShoppingList->product()->associate($products->random(1)->first()->id);
-          $oneShoppingList->shoppingCart()->associate($shoppings_carts->random(1)->first()->id);
+          $oneShoppingList->products()->associate($products->random(1)->first()->id);
+          $oneShoppingList->shoppingCarts()->associate($shoppings_carts->random(1)->first()->id);
           $oneProduct->save();
         }
 

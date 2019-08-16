@@ -11,15 +11,15 @@ class shoppingList extends Model
   //Cómo no tiene primaryKey "ID" se pone null (AGREGUE Mati)
   // protected $primaryKey = null;
   //Se define cuáles son las columnas que se pueden escribir
-  protected $fillable = ['quantity','shopping_cart_id','product_id'];
+  protected $fillable = ['quantity','shopping_cart_id','product_id', 'total_purchase'];
 
   // Se aclara la relación con product
-  public function product(){
-    return $this->belongsTo("App\Product", "product_id");
+  public function products(){
+    return $this->belongsToMany("App\Product", "product_id");
   }
 
   // Se aclara la relación con shoppingCart
-  public function shoppingCart(){
-    return $this->belongsTo("App\shoppingCart", "shopping_cart_id");
+  public function shoppingCarts(){
+    return $this->belongsToMany("App\shoppingCart", "shopping_cart_id");
   }
 }

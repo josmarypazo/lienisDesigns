@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\shoppingList;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +17,7 @@ class Product extends Model
 
     // Se aclara la relación con shoppingList (AGREGUE la s tambien Mati)
     public function shoppingLists(){
-      return $this->hasMany("App\shoppingList", "product_id");
+      return $this->belongsToMany("App\shoppingList", "product_id");
     }
 
 
