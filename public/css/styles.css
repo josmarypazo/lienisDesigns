@@ -1,16 +1,21 @@
-*{
-  font-size: 14px;
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Montserrat', 'Noto Sans', 'Ubuntu', sans-serif;
+  color: RGB(46, 139, 87);
 }
+
+body {
+      background-image: url("/img/rectangular1.jpg");
+}
+
       p {
-      margin-left: 10px;
-      color: RGB(46, 139, 87);
+      margin-left: 15px;
       }
 
-        a {
+        a, ul {
       list-style: none;
       text-decoration: none;
       align-items: center;
-      color: RGB(46, 139, 87);
         }
 
         ul li a {
@@ -19,14 +24,7 @@
       font-weight: bold;
         }
 
-      ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      	}
-
       h1 {
-      font-size: 15px;
        color: RGB(46, 139, 87);
       }
 
@@ -35,13 +33,7 @@
         *{
           font-size: 18px;
         }
-        .container{
-          max-width:1180px;
-        }
 
-        .slogan{
-          font-size: 25px;
-        }
 
         .main-nav ul li {
           display: inline-flex;

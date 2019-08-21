@@ -1,28 +1,66 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Open+Sans|Ubuntu&display=swap";
-
-* {
-  box-sizing: border-box;
-  font-family: 'Open Sans', 'Montserrat', 'Noto Sans', 'Ubuntu', sans-serif;
+a , p, label, input {
+  color: RGB(46, 139, 87);
 }
 
-body {
-      background-image: url("../img/rectangular1.jpg");
-      display: flex;
-}
-
-	.contenedor {
-		margin:0 auto;
-		display: flex;
-		max-width: 1200px;
-	}
-
-	.formulario, .mail, .pass {
+	.formulario {
+  margin-left: 380px;
   display: flex;
-	 color: RGB(46, 139, 87);
-    justify-content: center;
-	}
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  font-size: 15px;
+  }
 
-		.cabecera {
+.item {
+display: flex;
+text-align: center;
+flex-direction: column;
+}
+
+  input{
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  label{
+    font-weight: bold;
+  }
+
+  .ingresar {
+    background-color: RGB(46, 139, 87);
+    font-weight: bold;
+    padding: 7px;
+    margin: 15px;
+    color: white;
+    width: 200px;
+  }
+
+
+  .Recordarme{
+      align-items: center;
+  }
+
+  .Boton{
+  	background-color: RGB(46, 139, 87);
+  	font-weight: bold;
+  	padding: 7px;
+  	margin-top: 10px;
+  	margin-bottom: 20px;
+  	color: white;
+  	}
+
+  	h4 {
+  	    border:solid 5px orange;
+  	    display:flex;
+  	    justify-content: center;
+  	    padding: 5px;
+  	    margin: 0 auto;
+  	    color: #db0080;
+  	    font-size: 30px;
+  }
+
+
+		/* .cabecera {
 		  width: 100%;
 		  display: inline-flex;
 		  justify-content: center;
@@ -77,81 +115,4 @@ body {
 	background-color: rgb(125, 206, 160);
 	text-decoration: none;
   color: RGB(233, 247, 239);
-			}
-
-.formulario, .mail, .pass {
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  text-align: center;
-  margin-left: 40px;
-   }
-
-h1{
-  font-size: 24px;
-  text-align: center;
-  margin-right: 100px;
-	color: RGB(46, 139, 87);
-}
-
-input{
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
-.uno{
-  width: 70%;
-}
-
-label{
-  font-weight: bold;
-}
-
-.pais, .genero{
-  font-size: 20px;
-}
-
-.registro{
-	background-color: rgb(0, 209, 255);
-	font-weight: bold;
-}
-
-.cancelar{
-	background-color: red;
-	color: white;
-	}
-
-.Recordarme{
-    align-items: center;
-}
-
-.Boton{
-	background-color: RGB(46, 139, 87);
-	font-weight: bold;
-	padding: 7px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	color: white;
-	}
-
-	h4 {
-	    border:solid 5px orange;
-	    display:flex;
-	    justify-content: center;
-	    padding: 5px;
-	    margin: 0 auto;
-	    color: #db0080;
-	    font-size: 30px;
-}
-
-	@media (min-width: 768px) {
-		.contenedor {
-			max-width: 80%;
-						}
-	}
-
-	@media (min-width: 1024px) {
-		.contenedor {
-			max-width: 80%;
-						}
-	}
+			} */

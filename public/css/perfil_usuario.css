@@ -1,15 +1,3 @@
-@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-
-* {
-  box-sizing: border-box;
-  font-family: 'Open Sans', 'Montserrat', 'Noto Sans', 'Ubuntu', sans-serif;
-}
-
-body {
-  background-image: url("../img/rectangular1.jpg");
-  display: flex;
-  flex-direction: column;
-}
 
 label {
   color: RGB(46, 139, 87);
