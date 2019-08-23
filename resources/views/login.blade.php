@@ -5,13 +5,10 @@
 @section("mainContent")
 
 @section('customStyles')
-    <link rel="stylesheet" href="/css/login.css">
-  @endsection
+  <link rel="stylesheet" href="/css/login.css">
+@endsection
 
-
-  <div class="container">
-    <div class="row">
-  @section("mainContent")
+@section("mainContent")
 <div class="formulario">
     <h2>BIENVENIDO</h2>
 <form method="post">
@@ -31,7 +28,4 @@
   </form>
 
 </div>
-</div>
-</div>
 @endsection
-</html>

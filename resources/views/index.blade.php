@@ -57,30 +57,24 @@
 <div class="tendencias">
   <h2>LOS MÁS VENDIDOS</h2>
 </div>
-</section >
-<div class="products-container">
-    <div class="lista-productos">
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="unProducto">
+      <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
-
       </div>
-    </div>
-  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 @endsection

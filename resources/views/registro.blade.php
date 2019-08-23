@@ -6,8 +6,6 @@
 
 @section('pageTitle', 'Registro')
 
-<div class="container">
-  <div class="row">
 @section("mainContent")
   <div class="container" style="align-items: center;">
   <h2>REGISTRATE!</h2>
@@ -74,12 +72,12 @@
         </div>
       </div>
 
-            <div class="col-6">
+            {{-- <div class="col-6">
               <div class="form-group">
                 <label class="imgperfil"><b>Imagen de perfil:</b></label>
                 <input type="file" name='avatar' class="file" value="">
               </div>
-            </div>
+            </div> --}}
 
       <div class="col-12">
         <div class="form-group">
@@ -89,7 +87,4 @@
         </div>
       </div>
   </form>
-</div>
-</div>
 @endsection
-</html>

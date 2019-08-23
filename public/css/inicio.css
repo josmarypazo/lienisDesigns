@@ -12,29 +12,6 @@
   flex-direction: column;
 }
 
-.unProducto img {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
-
-.unProducto h4 {
-  margin-left: 10px;
-  margin-top: 15px;
-  color: RGB(46, 139, 87);
-  display: flex;
-  font-size: 18px;
-}
-
-.unProducto p {
-  color: RGB(46, 139, 87);
-  margin-left: 10px;
-  display: flex;
-  margin-bottom: 25px;
-  font-size: 16px;
-}
 
 .products-container {
   display: flex;
