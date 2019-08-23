@@ -52,7 +52,12 @@ Route::get("/perfil_usuario", function() {
 return view('perfil_usuario');
 });
 
-//Ruta a la pagina de detalle producto
-Route::get("/", function() {
+//Ruta a la pagina de crear producto
+Route::get("/create_product", "ProductsController@create");
 
-});
+//Ruta a la pagina de producto
+Route::get("/products", "ProductsController@list");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

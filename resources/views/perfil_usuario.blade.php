@@ -1,4 +1,4 @@
-        @section('pageTitle', 'Perfil Usuario')
+@section('pageTitle', 'Perfil Usuario')
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

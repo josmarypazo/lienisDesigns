@@ -13,7 +13,10 @@ input{
 	font-size: 12px
 		padding: 2px;
 }
-
+strong{
+  color:red;
+  font-size:15px;
+}
 .uno{
   width: 100%;
 	margin: 10px auto 15px;
