@@ -1,11 +1,11 @@
-En este repositorio se encuentra el proyecto integrador en Laravel realizado para el curso: Desarrollo Web Full Stack llevado a cabo en el período abril-agosto de 2019. Los colaboradores del proyecto son:
+<p align="center">Lienis Designs</p>
+En este repositorio se encuentra el eMarket migrado a Laravel realizado para el curso: Desarrollo Web Full Stack llevado a cabo en el período abril-agosto de 2019. Los colaboradores del proyecto son:
 
-> Maribel Claros
-> Matias Chillo
-> Josmary Pazo
-> Analia Rossotti
+- Maribel Claros
+- Matias Chillo
+- Josmary Pazo
+- Analia Rossotti
 
-En dicho proyecto se desarrolló un eMarket sobre bisutería femenina.
 
 ____________________________________________________________________________________________________________________________________
 
