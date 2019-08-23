@@ -16,11 +16,11 @@
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Productos        </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="productos">Collares</a>
-            <a class="dropdown-item" href="productos">Minibags</a>
-            <a class="dropdown-item" href="productos">Para ellos</a>
-            <a class="dropdown-item" href="productos">Pulseras</a>
-            <a class="dropdown-item" href="productos">Zarcillos</a>
+            <a class="dropdown-item" href="products">Collares</a>
+            <a class="dropdown-item" href="products">Minibags</a>
+            <a class="dropdown-item" href="products">Para ellos</a>
+            <a class="dropdown-item" href="products">Pulseras</a>
+            <a class="dropdown-item" href="products">Zarcillos</a>
           </div>
         </li>
         </nav>

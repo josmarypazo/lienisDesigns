@@ -6,10 +6,8 @@
 @endsection
 
 @section('pageTitle', 'Preguntas Frecuentes')
-<div class=container>
-<div class=row>
 
-  @section('mainContent')
+@section('mainContent')
 <div class="panel-group" id="accordion1">
     <h3>Preguntas Frecuentes</h3>
             <div class="panel-heading">
@@ -99,6 +97,4 @@
 {{-- <div class="unaPregunta">
     <h5>Si no encontraste la respuesta a tu pregunta en esta sección, envía un mail a  <a href="#">  lienis@gmail.com  </a>    ¡Estamos para ayudarte!</h5>
 </div> --}}
-  </div>
-  </div>
 @endsection
