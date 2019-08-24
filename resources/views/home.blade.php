@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('base')
 
-@section('content')
+@section('mainContent')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+            <div class="">
+                <div class="">Tablero-Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    Has iniciado sesión!
+                    {{-- You are logged in! --}}
                 </div>
             </div>
         </div>

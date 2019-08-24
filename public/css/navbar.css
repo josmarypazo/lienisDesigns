@@ -1,32 +1,10 @@
-.navbar  {
-  width: 100%;
-  background-color: rgba(234, 250, 241, 0.43);
-  display: flex;
-  margin-top: 15px;
-}
-
-.nav-item {
-  margin-right: 10px;
+.navbar, .navbar-ppal{
+margin-top: 20px;
+background-color: rgba(234, 250, 241, 0.43);
+align-content: center;
 }
 
 .dropdown-menu {
-  background-color: rgba(234, 250, 241, 0.43);
-}
+background-color: rgba(234, 250, 241, 0.43);}
 
-.container-logo {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-}
-
-.logo {
-  max-width: 20%;
-  border-radius: 100%;
-  border: solid 1px rgb(114,153,64);
-  flex-direction: column;
-  justify-content: center;
-  margin: 15px auto 30px;
-  padding: 10px;
-  background-color: #FBEFF5;
-}
+.nav-item {margin-left: 20px;}

@@ -1,13 +1,13 @@
 
 section{
   margin: auto;
-  /* width: 450px; */
   }
 
-/* .formulario{
-  margin: 40px auto 40px;
-	color: RGB(46, 139, 87);
-} */
+.title {justify-content: center;
+  display: flex;
+  text-align: center;
+margin: 30px;
+font-size: 30px;}
 
 input{
 	font-size: 12px

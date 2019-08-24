@@ -1,6 +1,7 @@
 
-.text-center {
+.navbarf  {
 display: flex;
+align-items: center;
 width: 100%;
 justify-content: center;
 margin: 15px 0 15px;
@@ -8,11 +9,13 @@ background-color: rgba(234, 250, 241, 0.43);
 color: RGB(46, 139, 87);
    }
 
-   .footer-item {
-     padding-top: 23px;
+   .nav-linkf {
+     margin-top: 40px;
      margin-left: 20px;
+     flex-wrap: wrap;
    }
 
    h3 {
      color: RGB(46, 139, 87);
+     flex-wrap: wrap;
    }

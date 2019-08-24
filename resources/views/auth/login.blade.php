@@ -1,5 +1,3 @@
-@extends('layouts.app')
-
 @extends('base')
 
 @section('pageTitle', 'Login')
@@ -9,14 +7,14 @@
     <link rel="stylesheet" href="/css/login.css">
 @endsection
 
-@section('content')
+@section('mainContent')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">BIENVENIDO</div>
+            <div class="">
+                <div class="title" ><h2>BIENVENIDO</h2></div>
 
-                <div class="card-body">
+                <div class="">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -52,7 +50,7 @@
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="recordarme" id="remember" {{ old('recordarme') ? 'checked' : '' }}>
-
+<br>
                                     <label class="form-check-label" for="remember">
                                         Recordarme
                                     </label>
@@ -65,7 +63,7 @@
                                 <button class="ingresar" type="submit" class="btn btn-primary">
                                     Ingresar
                                 </button>
-
+<br>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('¿Olvidaste tu contraseña?') }}
