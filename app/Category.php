@@ -11,6 +11,6 @@ class Category extends Model
 
     //Se aclara la relación (AGREGUE la s a product Mati)
     public function products() {
-      return $this->hasMany("App\Product", "category_id");
+      return $this->hasMany(Product::class);
     }
 }

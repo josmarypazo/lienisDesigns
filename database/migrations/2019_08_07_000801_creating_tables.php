@@ -50,14 +50,14 @@ class CreatingTables extends Migration{
         $table->timestamps();
     });
 
-     Schema::create('shopping_lists', function (Blueprint $table) {
-       $table->bigIncrements('id');
+     Schema::create('product_shopping_cart', function (Blueprint $table) {
+        $table->bigIncrements('id');
 				$table->unsignedBigInteger('shopping_cart_id')->nullable();
     		$table->foreign('shopping_cart_id')->references('id')->on('shopping_carts');
 				$table->unsignedBigInteger('product_id')->nullable();
     		$table->foreign('product_id')->references('id')->on('products');
-        $table->integer("quantity");
-        $table->decimal("total_purchase", 8, 2);
+        $table->integer("quantity")->nullable();
+        $table->decimal("total_purchase", 8, 2)->nullable();
 				$table->timestamps();
 });
 }
@@ -69,7 +69,7 @@ class CreatingTables extends Migration{
     public function down(){
 
 
-    Schema::dropIfExists('shopping_lists');
+    Schema::dropIfExists('product_shopping_cart');
 
     Schema::dropIfExists('shopping_carts');
 
