@@ -49,6 +49,12 @@ label{
 	margin-top: 20px;
 	}
 
+.contraseña {
+  background-color: RGB(46, 139, 87);
+  font-size: 15px;
+  color: white;
+}
+
 
 h2 {
 	margin: 30px auto 50px;
