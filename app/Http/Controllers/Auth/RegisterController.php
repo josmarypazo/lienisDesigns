@@ -55,7 +55,8 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'alpha_num', 'min:6', 'regex:/DH/i'],
             'country'=>['required'],
-            'avatar'=>['required', 'image','mimes:jpg,png,jpeg'],
+            'state'=>['required'],
+            'avatar'=>['required', 'image', 'mimes:jpg,png,jpeg'],
         ], [
 
           'fullName.required' => 'El campo nombre no puede estar vacío',
@@ -70,6 +71,7 @@ class RegisterController extends Controller
           'password.alpha_num'=>'La contraseña no puede contener espacios',
           'password.regex'=>'La contraseña debe contener las siglas DH en mayúsculas',
           'country.required' => 'El país de nacimiento es obligatorio',
+          'state'.'required' => 'La ciudad de nacimiento es obligatorio',
           'avatar.required' => 'La foto de perfil es obligatoria',
           'avatar.image'=>"Las ksfnfkjsfjksfj",
           'avatar.mimes'=>"Las formatos permitidos son jpg, png, jpeg",
@@ -97,6 +99,7 @@ class RegisterController extends Controller
             'email'=> $data['email'],
             'password'=> Hash::make($data['password']),
             'country'=>$data['country'],
+            'state'=>$data['state'],
             'avatar'=>$data['file'],
         ]);
     }
