@@ -2,7 +2,6 @@
 
 @section('pageTitle', 'Login')
 
-
 @section('customStyles')
     <link rel="stylesheet" href="/css/login.css">
 @endsection
@@ -65,7 +64,7 @@
                                 </button>
 <br>
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn-link" href="{{ route('password.request') }}">
                                         {{ __('¿Olvidaste tu contraseña?') }}
                                     </a>
                                 @endif

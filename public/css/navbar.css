@@ -8,3 +8,9 @@ align-content: center;
 background-color: rgba(234, 250, 241, 0.43);}
 
 .nav-item {margin-left: 20px;}
+
+.nav-linkk {align-items: flex-end;}
+
+.nav-link {
+  align-items: flex-start;
+}

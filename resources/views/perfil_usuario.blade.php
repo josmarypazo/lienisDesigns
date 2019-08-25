@@ -1,22 +1,11 @@
-@section('pageTitle', 'Perfil Usuario')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta <charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('pageTitle') - Lienis Design</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Open+Sans|Ubuntu&display=swap">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/perfil_usuario.css">
-    @yield('customStyles')
-  </head>
+@extends('base')
 
-<div class="container">
-<body @yield('bodyClass')>
+@section('pageTitle', 'Perfil de' . Auth::user()->name)
+
+@section('customStyles', '/css/perfil_usuario.css')
+
+
+{{-- <body @yield('bodyClass')>
 
   <div class="navbar" >
       <nav class=" navbar-expand-lg" style="align-items: flex-start;">
@@ -62,29 +51,29 @@
         </nav>
     </div>
 
-              <div class="welcome" style="color: RGB(46, 139, 87);">
-              <h2>Bienvenido USUARIO</h2>
-              </div>
 
               <!-- NAVBAR -->
-              @include('logo')
+              @include('logo') --}}
 
+              <div class="welcome" style="color: RGB(46, 139, 87);">
+              <h2>Bienvenido {{ Auth::user()->fullName }}</h2>
+              </div>
 
               <div class="contenedor">
                 <div class="item">
-                  <img class="imgPerfil" src=" ">
+                  <img class="imgPerfil" src="/img/img_1353.png" width="400" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
                 </div>
                 <div class="item">
                   <form class="formulario">
                     <div>
-                      <label for="">Nombre completo:  </label>
+                      <label for="">Nombre completo:  {{ Auth::user()->name }}</h2></label>
 
                       </div>
                     <div>
-                      <label for="">Nombre de Usuario: </label>
+                      <label for="">Nombre de Usuario: {{ Auth::user()->user }}</h2> </label>
                   </div>
                     <div>
-                      <label for="email">Email: </label>
+                      <label for="email">Email: {{ Auth::user()->email }}</h2></label>
 
                     </div>
                     <div>
@@ -106,5 +95,3 @@
       </div>
     </div>
   </div>
-  </body>
-</html>
