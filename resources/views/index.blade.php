@@ -2,13 +2,6 @@
 
 @section('pageTitle', 'Home')
 
-@section('customStyles')
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-@endsection
-
-
-
         @section('mainContent')
 <!-- carousel -->
 <div class="container-carousel">
@@ -57,6 +50,7 @@
 <div class="tendencias">
   <h2>LOS MÁS VENDIDOS</h2>
 </div>
+<div class="fotos">
       <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
@@ -75,6 +69,9 @@
       <div class="col-xs-12 col-md-6 col-lg-4">
         <img src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      </div>
+      @section('customStyles')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      @endsection
 @endsection

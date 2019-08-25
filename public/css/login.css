@@ -2,6 +2,13 @@ a , p, label, input {
   color: RGB(46, 139, 87);
 }
 
+
+h2 {justify-content: center;
+  display: flex;
+  text-align: center;
+margin-bottom: 50px;
+font-size: 40px;}
+
 	.formulario {
   margin-left: 380px;
   display: flex;
@@ -35,7 +42,6 @@ flex-direction: column;
     width: 100px;
   }
 
-
   .Recordarme{
       align-items: center;
   }
@@ -60,59 +66,15 @@ flex-direction: column;
   }
 
 
-		/* .cabecera {
-		  width: 100%;
-		  display: inline-flex;
-		  justify-content: center;
-		  align-items: center;
-		  flex-direction:row;
-		  flex-wrap: wrap;
-		  margin-top: 15px;
-		  color: RGB(46, 139, 87);
-			background-color: rgba(234, 250, 241, 0.43);
 
-		        }
+        @media (min-width:768px) {
+          *{
+            font-size: 16px;
+          }
+  }
 
-	.nav-login {
-	display: inline-flex;
-	width: 100%;
-	justify-content: flex-end;
-	text-align: center;
-	margin-top: 15px;
-	padding: 25px;
-					}
-
-	.nav-login ul li:hover{
-	color: RGB(233, 247, 239);
-	background-color: rgb(125, 206, 160);
-	text-decoration: none;
-					}
-
-	.nav-login ul {
-	display: inline-flex;
-		}
-
-	.nav-login ul li a, .main-nav ul li a{
-	font-size:14px;
-	}
-
-	.nav-login ul li{
-	justify-content: center;
-	margin-right: 10px;
-	border-radius: 10%;
-		 }
-
-	.main-nav ul li {
-	width: 100%;
-	display: inline-flex;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	text-align: center;
-		}
-
-		.main-nav ul li a:hover{
-	background-color: rgb(125, 206, 160);
-	text-decoration: none;
-  color: RGB(233, 247, 239);
-			} */
+        @media (min-width:1200px) {
+          *{
+            font-size: 18px;
+          }
+  }

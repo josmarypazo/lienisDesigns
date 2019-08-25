@@ -13,12 +13,14 @@ class shoppingCart extends Model
 
   // Se aclara la relación con customer
   public function customer(){
-    return $this->belongsTo("App\Customer", "customer_id");
+    return $this->belongsTo(Customer::class);
   }
 
-  // Se aclara la relación con shoppingLists (AGREUGE la s Mati)
-  public function shoppingLists(){
-    return $this->belongsToMany("App\shoppingList", "shopping_cart_id");
+  // Se aclara la relación con shoppingLists (AGREGUE la s Mati)
+  public function products(){
+    return $this->belongsToMany(Product::class)
+    //->withPivot($this->quantity, $this->total_purchase)
+    ->withTimestamps();
   }
 
 }
