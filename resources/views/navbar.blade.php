@@ -24,11 +24,11 @@
         Productos
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Collares</a>
-        <a class="dropdown-item" href="#">Minibags</a>
-        <a class="dropdown-item" href="#">Para ellos</a>
-        <a class="dropdown-item" href="#">Pulseras</a>
-        <a class="dropdown-item" href="#">Zarcillos</a>
+        <a class="dropdown-item" href="products">Collares</a>
+        <a class="dropdown-item" href="products">Minibags</a>
+        <a class="dropdown-item" href="products">Para ellos</a>
+        <a class="dropdown-item" href="products">Pulseras</a>
+        <a class="dropdown-item" href="products">Zarcillos</a>
       </div>
     </li>
       <ul class="nav-item">
