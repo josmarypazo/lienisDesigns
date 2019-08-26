@@ -1,0 +1,74 @@
+@extends('base')
+
+@section('pageTitle', 'Crear producto')
+
+@section('customStyles')
+  <link rel="stylesheet" href="/css/registro.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+
+@endsection
+
+@section('mainContent')
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="">
+                <div class="title" style="text-align: center;">DETALLE DE TU COMPRA</div>
+
+                <div class="">
+                    <form method="POST" action="/purchase" enctype="multipart/form-data" class="form">
+                        @csrf
+_________________________________________
+
+<div class="form-group row">
+      <label for="product_id" class="col-md-4 col-form-label text-md-right">Producto</label>
+
+<div class="col-md-4">
+      <input type="text" class="form-control"
+       name="product_id" value="" autocomplete="" autofocus>
+
+</div>
+</div>
+
+<div class="form-group row">
+      <label for="quantity" class="col-md-4 col-form-label text-md-right">Cantidad</label>
+
+<div class="col-md-4">
+      <input type="number" class="form-control"
+       name="quantity" value="" autocomplete="" autofocus>
+
+</div>
+</div>
+
+<div class="form-group row">
+      <label for="total_purchase"  class="col-md-4 col-form-label text-md-right">Total</label>
+
+<div class="col-md-4">
+      <input type="number" class="form-control"
+       name="total_purchase" value="" autocomplete="" autofocus>
+</div>
+</div>
+
+<div class="form-group row mb-0">
+  <div class="col-md-4 offset-md-4">
+  <button class="registro" type="submit" name="mas" class="btn btn-primary">
+          {{ __('Ver más') }}
+  </button>
+
+  <button class="cancelar"  type="reset" name="listo" class="btn btn-primary">
+      {{ __('¡Listo!') }}
+  </button>
+
+          </div>
+      </div>
+_________________________________________
+                    </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+</body>

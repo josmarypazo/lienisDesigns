@@ -51,3 +51,70 @@
     </div>
 </div>
 @endsection
+
+
+
+<style>
+.slogan {color: RGB(46, 139, 87);}
+
+.navbar{
+margin-top: 20px;
+background-color: rgba(234, 250, 241, 0.43);
+align-content: center;
+}
+
+li { align-items: center;}
+
+.nav-linkk {padding: 10px;}
+.nav-link {margin: auto;}
+
+ .dropdown-menu { background-color: rgba(234, 250, 241, 0.43);}
+
+
+ @media (min-width:768px) {
+   .navbar{ font-size: 16px; }
+   .nav-linkk {margin-left: 10px;}
+   .nav-link {margin-left: 5px;}
+}
+
+@media (min-width:1200px) {
+  .navbar{   font-size: 22px; }
+    .nav-linkk { margin-left: 40px; }
+    .nav-link { margin-left: 15px; }
+    .navbar{ font-size: 20px; }
+}
+
+
+.navbarf  {
+display: flex;
+align-items: center;
+width: 100%;
+justify-content: center;
+margin: 15px 0 15px;
+background-color: rgba(234, 250, 241, 0.43);
+color: RGB(46, 139, 87);
+   }
+
+.nav-linkf i, .nav-itemf  {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+   .nav-linkf {
+     margin-top: 35px;
+     margin-left: 10px;
+     }
+
+   h3 {
+     color: RGB(46, 139, 87);
+     font-size: 20px;
+     align-items: center;
+   }
+
+         @media (min-width:768px) {
+           h3 {
+              font-size: 24px;
+           }
+   }
+
+</style>

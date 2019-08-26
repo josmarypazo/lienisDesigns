@@ -5,9 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="">
-                <div class="">Tablero-Dashboard</div>
+                <div class="">Tablero</div>
+                {{-- Dashboard --}}
 
-                <div class="card-body">
+                <div class="">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
