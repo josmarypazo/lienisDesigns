@@ -9,13 +9,24 @@ background-color: rgba(234, 250, 241, 0.43);
 color: RGB(46, 139, 87);
    }
 
+
+.nav-linkf i, .nav-itemf  {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
    .nav-linkf {
-     margin-top: 40px;
-     margin-left: 20px;
-     flex-wrap: wrap;
-   }
+     margin-top: 35px;
+     margin-left: 10px;
+     }
 
    h3 {
      color: RGB(46, 139, 87);
-     flex-wrap: wrap;
+     font-size: 20px;
+     align-items: center;
+   }
+
+         @media (min-width:768px) {
+           h3 {
+              font-size: 24px;
+           }
    }

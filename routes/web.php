@@ -52,13 +52,26 @@ Route::get("/perfil_usuario", function() {
 return view('perfil_usuario');
 });
 
-//Ruta a la pagina de crear producto
-Route::get("/create_product", "ProductsController@create");
-
-//Ruta a la pagina de producto
+//Ruta a la pagina de productos
 Route::get("/products", "ProductsController@list");
 
+//Ruta a la pagina de crear producto por get
+Route::get("/products/create", "ProductsController@create");
 
+//Ruta a la pagina de crear producto por post
+Route::post("/products/create", "ProductsController@store");
+
+//Ruta a la pagina del detalle de un producto
+Route::get("/products/{id}", "ProductsController@detail");
+
+//Ruta para borrar un producto
+Route::delete("/products/{id}", "ProductsController@destroy");
+
+//Ruta para editar un producto por get
+Route::get("/products/edit/{id}", "ProductsController@edit");
+
+//Ruta para editar un producto por put
+Route::put("/products/edit/{id}", "ProductsController@update");
 
 Auth::routes();
 

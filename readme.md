@@ -1,16 +1,3 @@
-<p align="center">Lienis Designs</p>
-En este repositorio se encuentra el eMarket migrado a Laravel realizado para el curso: Desarrollo Web Full Stack llevado a cabo en el período abril-agosto de 2019. Los colaboradores del proyecto son:
-
-- Maribel Claros
-- Matias Chillo
-- Josmary Pazo
-- Analia Rossotti
-
-
-____________________________________________________________________________________________________________________________________
-
-
-
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

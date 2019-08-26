@@ -21,7 +21,9 @@ margin-top: 30px;
 margin-bottom: 25px;
 }
 
-
+.foto {
+  padding: 10px;
+}
 
       @media (min-width:768px) {
         *{

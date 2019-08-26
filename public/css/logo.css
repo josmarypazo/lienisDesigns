@@ -1,0 +1,29 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  border-radius: 100%;
+  border: solid 1px rgb(114,153,64);
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px auto 30px;
+  padding: 12px;
+  background-color: #FBEFF5;
+}
+
+.slogan {
+  flex-direction: column;
+  align-self: center;
+font-size: 18px;
+display: flex;
+align-items: center;
+}
+
+
+@media (min-width:768px) {
+  .logo {
+     width: 25%;
+  }
+  .slogan {font-size: 22px;}
+}

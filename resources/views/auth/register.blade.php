@@ -18,7 +18,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="">
-                    <div class="title">REGÍSTRATE</div>
+                    <div class="title"><h2>REGÍSTRATE</h2></div>
 
                     <div class="">
                         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="form">
@@ -154,7 +154,7 @@
                        <label for="avatar" class="col-md-4 text-md-right">Imagen de perfil</label>
 
                   <div class="col-md-4">
-                        <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror"
+                        <input id="avatar" type="file" class="@error('avatar') is-invalid @enderror"
                           name="avatar" autocomplete="avatar">
 
                   @error('avatar')
