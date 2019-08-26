@@ -5,70 +5,21 @@
 
 @section('mainContent')
   <div class="container">
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-      <img src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+    @foreach ($products as $product)
+      <div class="col-xs-12 col-md-6 col-lg-4" style="padding-bottom:10px">
+        <div class="card">
+          <img src="/storage/img/{{ $product->image }}" class="card-img-top" alt="Imagen del producto" width="100%" height="100%" width="90%" height="90%" style="border-radius:5%">
+          <div class="card-body">
+            <h5 class="card-title"> {{ $product->name }}</h5>
+            <p class="card-text">{{ substr($product->description, 0, 90) }}...</p>
+            <p class="card-text">${{ $product->price }}</p>
+            <a href="/products/{{ $product->id }}" class="btn btn-success">Ver detalle</a>
+          </div>
+        </div>
+      </div>
+    @endforeach
+    
   </div>
 
 
 @endsection
-
-
-
-
-{{--
-@extends('base')
-
-@section('pageTitle', 'Productos')
-  <body>
-@section('mainContent')
-<div class="container">
-  <div class="products-container">
-      <div class="lista-productos">
-        <div class="unProducto">
-          <img src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-        <div class="unProducto">
-          <img src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-        <div class="unProducto">
-          <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-        <div class="unProducto">
-          <img src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-        <div class="unProducto">
-          <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-        <div class="unProducto">
-          <img src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
-        </div>
-</div>
-</div>
-
-
-@section('mainContent')
-  </div>
-  </body>
-</html> --}}
