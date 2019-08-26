@@ -52,22 +52,22 @@
 </div>
 <div class="fotos">
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       </div>
       @section('customStyles')

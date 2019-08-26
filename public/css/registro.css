@@ -6,8 +6,8 @@ section{
 .title {justify-content: center;
   display: flex;
   text-align: center;
-margin: 30px;
-font-size: 30px;}
+  margin: 30px;
+  font-size: 30px;}
 
 input{
 	font-size: 12px
@@ -49,12 +49,6 @@ label{
 	margin-top: 20px;
 	}
 
-.contraseña {
-  background-color: RGB(46, 139, 87);
-  font-size: 15px;
-  color: white;
-}
-
 
 h2 {
 	margin: 30px auto 50px;
@@ -62,6 +56,10 @@ h2 {
 	display: flex;
 align-items: center;}
 
-.imgperfil {
-	margin-top: 10px;
+
+.button {
+ background-color: RGB(46, 139, 87);
+ padding: 5px;
+ margin-top: 40px;
+ color: white;
 }
