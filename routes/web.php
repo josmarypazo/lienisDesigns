@@ -58,6 +58,8 @@ Route::get("/create_product", "ProductsController@create");
 //Ruta a la pagina de producto
 Route::get("/products", "ProductsController@list");
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
