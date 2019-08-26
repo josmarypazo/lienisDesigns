@@ -12,9 +12,9 @@
 */
 
 //RUTA, CONTROLADOR VISTA
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 //Ruta a la pagina de inicio
 Route::get("/index", function() {
@@ -22,8 +22,8 @@ return view('index');
 });
 
 //Ruta a la pagina de productos
-Route::get("/productos", function() {
-return view('productos');
+Route::get("/products", function() {
+return view('products');
 });
 
 //Ruta a la pagina de productos

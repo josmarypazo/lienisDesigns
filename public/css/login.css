@@ -18,6 +18,10 @@ font-size: 40px;}
   font-size: 10px;
   }
 
+  .btn-link {
+    color: RGB(46, 139, 87);
+  }
+
 .item {
 display: flex;
 text-align: center;

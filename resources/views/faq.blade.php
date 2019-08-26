@@ -7,7 +7,7 @@
 @section('pageTitle', 'Preguntas Frecuentes')
 
 @section('mainContent')
-<div class="panel-group" id="accordion1">
+{{-- <div class="panel-group" id="accordion1"> --}}
     <h3>Preguntas Frecuentes</h3>
             <div class="panel-heading">
           <h4 class="panel-title" > <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">¿Cómo hago para comprar on line?</a> </h4>
