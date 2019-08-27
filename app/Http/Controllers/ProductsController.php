@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\product_shoppingCart;
 
 class ProductsController extends Controller
 {
@@ -92,4 +93,13 @@ class ProductsController extends Controller
     return redirect("/products");
   }
 
+
+  public function purchase($id){
+    $productToBuy = Product::find($id);
+    $product_shopping_cart = product_shoppingCart::find("total_purchase");
+    $vac = compact("productToBuy", "product_shopping_cart");
+
+    return view("purchase", $vac);
+
+  }
 }

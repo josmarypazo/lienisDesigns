@@ -30,14 +30,14 @@ window.addEventListener("load", function() {
       return alert("Completa el campo Repetir Contraseña, por favor");
     } if(country.value == "Elige un país"){
       event.preventDefault()
-      return alert("No eligiste ningún país");
+      return alert("No elegiste ningún país");
     } if(state.value == "Elige una ciudad"){
       event.preventDefault()
-      return alert("No eligiste ninguna provincia de Argentina");
+      return alert("No elegiste ninguna provincia de Argentina");
     } if(avatar.value == ""){
       event.preventDefault()
       return alert("No seleccionaste ningún archivo de tipo Imagen de Perfil");
     }
-    
+
   })
 });

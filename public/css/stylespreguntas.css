@@ -1,36 +1,22 @@
 .panel-group {
-padding: 30px;
-margin-left: 30px;
   width: 100%;
   color: RGB(46, 139, 87);
   flex-direction: column;
   justify-content:space-around;
-  flex-wrap: nowrap;
   }
 
-  .unaPregunta {
-text-decoration: none;
-color: RGB(88, 214, 141);
-}
-
-.panel-title, h3, h5 {
-  color: RGB(46, 139, 87);}
-
-  .panel-body, p {
+  .panel-body {
     color: rgb(14, 102, 85);
+    margin-left: 30px;
   }
 
-  h3 {
-    margin: 30px 0 30px;}
+  .panel-heading {
+  padding: 40px;}
 
           @media (min-width:768px) {
-            *{
-              font-size: 16px;
-            }
+
     }
 
           @media (min-width:1200px) {
-            *{
-              font-size: 18px;
-            }
+
     }

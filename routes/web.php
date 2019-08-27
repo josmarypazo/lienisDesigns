@@ -73,6 +73,9 @@ Route::get("/products/edit/{id}", "ProductsController@edit");
 //Ruta para editar un producto por put
 Route::put("/products/edit/{id}", "ProductsController@update");
 
+//Ruta a la pagina de la compra por post
+Route::get("/products/purchase/{id}", "ProductsController@purchase");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
