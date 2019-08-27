@@ -55,6 +55,9 @@ return view('perfil_usuario');
 //Ruta a la pagina de productos
 Route::get("/products", "ProductsController@list");
 
+//Ruta al buscador
+Route::get("/products/search", "ProductsController@search");
+
 //Ruta a la pagina de crear producto por get
 Route::get("/products/create", "ProductsController@create");
 

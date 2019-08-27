@@ -2,7 +2,7 @@
 .logo {
   display: flex;
   align-items: center;
-  width: 35%;
+  width: 30%;
   border-radius: 100%;
   border: solid 1px rgb(114,153,64);
   flex-direction: column;
@@ -26,4 +26,11 @@ align-items: center;
      width: 25%;
   }
   .slogan {font-size: 22px;}
+}
+
+@media (min-width:1200px) {
+  .logo {
+     width: 20%;
+  }
+
 }
