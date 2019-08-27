@@ -14,10 +14,18 @@
 <li class="nav-item">
         <span><i class="fa fa-search"></i></span>
         <input class="inputs" type="search" id="search" placeholder="Buscar..." />
+        {{-- <form class="" action="/products/search" method="get"> --}}
         </a>  </li>
         {{-- <li class="nav-item">
         <a href="#" class="carro"><i class="fas fa-shopping-cart"></i></a>
         </li> --}}
+{{--
+        @foreach ($actores as $actor)
+            </ul>
+        <a href="/actor/{{$actor->id}}">
+        <li>{{$actor->first_name}}</li>
+        </a>
+            @endforeach --}}
 
 
     <li class="nav-item">
