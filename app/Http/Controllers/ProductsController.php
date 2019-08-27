@@ -100,6 +100,5 @@ class ProductsController extends Controller
     $vac = compact("productToBuy", "product_shopping_cart");
 
     return view("purchase", $vac);
-
   }
 }
