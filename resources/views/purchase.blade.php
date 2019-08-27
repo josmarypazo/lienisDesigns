@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('pageTitle', 'Crear producto')
+@section('pageTitle', 'Comprando ' . $productToBuy->name)
 
 @section('customStyles')
   <link rel="stylesheet" href="/css/registro.css">
@@ -15,7 +15,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="">
-                <div class="title" style="text-align: center;">DETALLE DE TU COMPRA</div>
+                <div class="title" style="text-align: center">DETALLE DE TU COMPRA</div>
 
                 <div class="">
                     <form method="POST" action="/purchase" enctype="multipart/form-data" class="form">
@@ -25,11 +25,7 @@ _________________________________________
 <div class="form-group row">
       <label for="product_id" class="col-md-4 col-form-label text-md-right">Producto</label>
 
-<div class="col-md-4">
-      <input type="text" class="form-control"
-       name="product_id" value="" autocomplete="" autofocus>
-
-</div>
+<h3 style="margin: 5 18; color:black; font-weight: bold">{{ $productToBuy->name }}</h3>
 </div>
 
 <div class="form-group row">
@@ -45,20 +41,17 @@ _________________________________________
 <div class="form-group row">
       <label for="total_purchase"  class="col-md-4 col-form-label text-md-right">Total</label>
 
-<div class="col-md-4">
-      <input type="number" class="form-control"
-       name="total_purchase" value="" autocomplete="" autofocus>
-</div>
+<h3 style="margin: 5 18; color:black; font-weight: bold">-</h3>
 </div>
 
 <div class="form-group row mb-0">
   <div class="col-md-4 offset-md-4">
-  <button class="registro" type="submit" name="mas" class="btn btn-primary">
-          {{ __('Ver más') }}
+  <button class="registro" style="font-weight: bold" type="submit" name="cancelar" class="btn btn-primary">
+          {{ __('Confirmar compra') }}
   </button>
 
-  <button class="cancelar"  type="reset" name="listo" class="btn btn-primary">
-      {{ __('¡Listo!') }}
+  <button class="cancelar" type="reset" name="listo" class="btn btn-primary">
+      {{ __('Cancelar') }}
   </button>
 
           </div>

@@ -20,10 +20,11 @@
             <h4>Stock: {{ $productToFind->stock }}</h4>
             <h4>Puntuación: {{ $productToFind->rating }} </h4>
             <h4>Precio: ${{ $productToFind->price }}</h4>
-            <button type="submit" class="btn btn-success">COMPRAR</button>
-
             {{-- @auth --}}
                 <form action="/products/{{ $productToFind->id }}" method="POST" style="display:inline">
+            <a href="/products/purchase/{{ $productToFind->id }}" class="btn btn-success">COMPRAR</a>
+
+
                     @csrf
                     {{ method_field("delete") }}
                     <button type="submit" class="btn btn-danger">BORRAR</button>
