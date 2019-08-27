@@ -11,22 +11,18 @@
 
       <nav class="navbar-expand-md">
     <ul class="navbar-nav">
-<li class="nav-item">
+      <li class="nav-item">
+        <form class="" action="/products/search" method="get">
+          @csrf
         <span><i class="fa fa-search"></i></span>
-        <input class="inputs" type="search" id="search" placeholder="Buscar..." />
-        {{-- <form class="" action="/products/search" method="get"> --}}
-        </a>  </li>
+        <input class="inputs" type="search" id="search"name="buscador" placeholder="Buscar..." />
+      </form>
+
+          </li>
+
         {{-- <li class="nav-item">
         <a href="#" class="carro"><i class="fas fa-shopping-cart"></i></a>
         </li> --}}
-{{--
-        @foreach ($actores as $actor)
-            </ul>
-        <a href="/actor/{{$actor->id}}">
-        <li>{{$actor->first_name}}</li>
-        </a>
-            @endforeach --}}
-
 
     <li class="nav-item">
       <a class="nav-link" href="/index">Inicio</a>

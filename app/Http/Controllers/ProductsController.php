@@ -101,4 +101,12 @@ class ProductsController extends Controller
 
     return view("purchase", $vac);
   }
+
+
+  public function search(){
+    $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
+    ->get();
+    return view("search", compact("products"));
+  }
+
 }
