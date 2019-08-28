@@ -49,7 +49,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'fullName'=> ['required', 'alpha', 'max:255'],
+            'fullName'=> ['required', 'regex:/^[a-zA-Z\s]+$/u', 'max:255'],
             'user'=>['required', 'string', 'max:255'],
             'birthdate'=>['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -59,7 +59,7 @@ class RegisterController extends Controller
         ], [
 
           'fullName.required' => 'El campo nombre no puede estar vacío',
-          'fullName.alpha'=>'El campo nombre debe contener solo letras',
+          'fullName.regex'=>'El campo nombre debe contener solo letras. Permite espacios pero no tildes',
           'user.required'=>'El usuario es obligatorio',
     			'birthdate.required'=>'La fecha de nacimiento es obligatoria',
     			'email.required'=>'El email es obligatorio',
