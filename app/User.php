@@ -1,25 +1,22 @@
 <?php
 
 namespace App;
-
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+  use Notifiable;
+    //Se definen cuáles son las columnas que se pueden escribir
+    protected $fillable = ['fullName', 'user', 'birthdate', 'email', 'password', 'country', 'state', 'avatar'];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    // Se aclara la relación (AGREGUE las y cambie en nombre del modelo que estaba mal Mati)
+    public function shoppingCarts(){
+      return $this->hasMany(shoppingCart::class);
+  }
 
-    /**
+  /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
@@ -27,7 +24,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,4 +32,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }

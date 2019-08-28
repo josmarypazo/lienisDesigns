@@ -11,7 +11,7 @@ class CreatingTables extends Migration{
      * @return void
      */
      public function up(){
-       Schema::create('customers', function (Blueprint $table) {
+       Schema::create('users', function (Blueprint $table) {
            $table->bigIncrements('id');
            $table->string('fullName');
            $table->string('user', 50);
@@ -19,6 +19,7 @@ class CreatingTables extends Migration{
            $table->string('email')->unique();
            $table->string('password');
            $table->string("country");
+           $table->string("state")->nullable();
            $table->string("avatar");
            $table->rememberToken();
            $table->timestamps();
@@ -45,8 +46,8 @@ class CreatingTables extends Migration{
 
      Schema::create('shopping_carts', function (Blueprint $table) {
         $table->bigIncrements('id');
-        $table->unsignedBigInteger('customer_id')->nullable();
-        $table->foreign('customer_id')->references('id')->on('customers');
+        $table->unsignedBigInteger('user_id')->nullable();
+        $table->foreign('user_id')->references('id')->on('users');
         $table->timestamps();
     });
 
@@ -77,7 +78,7 @@ class CreatingTables extends Migration{
 
     Schema::dropIfExists('categories');
 
-    Schema::dropIfExists('customers');
+    Schema::dropIfExists('users');
 
   }
 }

@@ -49,8 +49,8 @@ Route::get("/quiensoy", function() {
 
 //Ruta a la pagina de perfil usuario
 Route::get("/perfil_usuario", function() {
-return view('perfil_usuario');
-});
+  return view('perfil_usuario');
+})->name('perfil_usuario')->middleware('auth');
 
 //Ruta a la pagina de productos
 Route::get("/products", "ProductsController@list");
@@ -77,7 +77,7 @@ Route::get("/products/edit/{id}", "ProductsController@edit");
 Route::put("/products/edit/{id}", "ProductsController@update");
 
 //Ruta a la pagina de la compra por post
-Route::get("/products/purchase/{id}", "ProductsController@purchase");
+Route::get("/products/purchase/{id}", "Product_shopping_CartController@purchase");
 
 Auth::routes();
 

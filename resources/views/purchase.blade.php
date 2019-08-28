@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/footer.css">
 
-@endsection
 
 @section('mainContent')
 <body>
@@ -35,6 +34,16 @@ _________________________________________
       <input type="number" class="form-control"
        name="quantity" value="" autocomplete="" autofocus>
 
+       <form action="">
+         <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i></button>
+       </form>
+       <form action="">
+         <button class="btn btn-warning" type="submit"><i class="fas fa-minus"></i></button>
+       </form>
+       <form action="">
+           <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i></button>
+       </form>
+
 </div>
 </div>
 
@@ -43,6 +52,8 @@ _________________________________________
 
 <h3 style="margin: 5 18; color:black; font-weight: bold">-</h3>
 </div>
+
+
 
 <div class="form-group row mb-0">
   <div class="col-md-4 offset-md-4">
@@ -65,3 +76,4 @@ _________________________________________
       </div>
 
 </body>
+@endsection

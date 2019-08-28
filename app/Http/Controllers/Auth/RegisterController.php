@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Customer;
+use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -55,7 +55,6 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'alpha_num', 'min:6', 'regex:/DH/i'],
             'country'=>['required'],
-            'state'=>['required'],
             'avatar'=>['required', 'image', 'mimes:jpg,png,jpeg'],
         ], [
 
@@ -71,12 +70,9 @@ class RegisterController extends Controller
           'password.alpha_num'=>'La contraseña no puede contener espacios',
           'password.regex'=>'La contraseña debe contener las siglas DH en mayúsculas',
           'country.required' => 'El país de nacimiento es obligatorio',
-          'state'.'required' => 'La ciudad de nacimiento es obligatorio',
           'avatar.required' => 'La foto de perfil es obligatoria',
-          'avatar.image'=>"Las ksfnfkjsfjksfj",
+          'avatar.image'=>"El archivo debe ser una imagen",
           'avatar.mimes'=>"Las formatos permitidos son jpg, png, jpeg",
-
-
       ]);
     }
 
@@ -84,23 +80,20 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
-     */
-
-     /**
-      * Creamos un nuevo cliente luego de la validación de registro CAMBIE USER POR CUSTOMER
-      */
+     * @retEl archivo debe ser una imagen
+      *
+      **/
     protected function create(array $data)
     {
         return User::create([
-            'fullName'=> $data['name'],
+            'fullName'=> $data['fullName'],
             'user'=>$data['user'],
             'birthdate'=>$data['birthdate'],
             'email'=> $data['email'],
             'password'=> Hash::make($data['password']),
             'country'=>$data['country'],
-            'state'=>$data['state'],
-            'avatar'=>$data['file'],
+            'state'=> isset($data['state']) ? $data['state'] : null,
+            'avatar'=>$data['avatar'],
         ]);
     }
 }

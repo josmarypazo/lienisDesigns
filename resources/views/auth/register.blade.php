@@ -6,14 +6,13 @@
 
 @section('pageTitle', 'Registro')
 <meta name="csrf-token" content="{{ csrf_token() }}">
+
 @section('mainContent')
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+    @if ($errors)
+      @foreach ($errors->all() as $oneError)
+      <p>{{ $oneError }}</p>
+      @endforeach
+    @endif
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -116,8 +115,8 @@
                       <label for="country" class="col-md-4 col-form-label text-md-right">País de nacimiento</label>
 
                   <div class="col-md-4">
-                    <select id="country" type="text" value="" class="form-control @error('country') is-invalid @enderror"
-                      name="country" autocomplete="country" autofocus>>
+                    <select id="country" class="form-control @error('country') is-invalid @enderror"
+                      name="country" >
                       <option>Elige un país</option>
 
                       </select>
@@ -134,8 +133,8 @@
                       class="col-md-4 col-form-label text-md-right">Ciudad de nacimiento</label>
 
                   <div class="col-md-4">
-                    <select style="display:none" type="text" class="form-control @error('state') is-invalid @enderror"
-                      name="state" value="{{ old('state') }}" autocomplete="state" autofocus>>
+                    <select style="display:none" class="form-control @error('state') is-invalid @enderror"
+                      name="state">
                       <option>Elige una ciudad</option>
 
 
@@ -186,7 +185,4 @@
     </div>
     <script src="js/countries.js"></script>
     <script src="js/validacion.js"></script>
-  </body>
-</html>
-
 @endsection

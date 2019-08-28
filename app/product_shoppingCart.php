@@ -11,6 +11,8 @@ class product_shoppingCart extends Model
   //Se define cuáles son las columnas que se pueden escribir
   protected $fillable = ['quantity', 'total_purchase', 'shopping_cart_id', 'product_id'];
 
+
+
   // Se aclara la relación con product
   // public function products(){
   //   return $this->belongsToMany("App\Product", "shopping_lists", "shopping_cart_id", "product_id");

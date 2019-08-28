@@ -93,16 +93,6 @@ class ProductsController extends Controller
     return redirect("/products");
   }
 
-
-  public function purchase($id){
-    $productToBuy = Product::find($id);
-    $product_shopping_cart = product_shoppingCart::find("total_purchase");
-    $vac = compact("productToBuy", "product_shopping_cart");
-
-    return view("purchase", $vac);
-  }
-
-
   public function search(){
     $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
     ->get();
