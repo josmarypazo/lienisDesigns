@@ -1,11 +1,11 @@
 @extends('base')
 
-{{-- @section('pageTitle', 'Perfil de' . Auth::user()->name) --}}
+ @section('pageTitle', 'Perfil de ' . Auth::user()->fullName)
 <link rel="stylesheet" href="/css/perfil_usuario.css">
 
 @section('mainContent')
               <div class="welcome">
-              <h2>Bienvenido {{-- Auth::user()->fullName --}}</h2>
+              <h2>Bienvenido {{ Auth::user()->fullName }}</h2>
               </div>
 
               <div class="contenedor">
@@ -15,14 +15,14 @@
                 <div class="item">
                   <form class="formulario">
                     <div>
-                      <label class="itemform" for="">Nombre completo: {{-- Auth::user()->name --}}</h2></label>
+                      <label class="itemform" for="">Nombre completo: {{ Auth::user()->fullName }}</h2></label>
 
                       </div>
                     <div>
-                      <label class="itemform" for="">Nombre de Usuario: {{-- Auth::user()->user --}}</h2> </label>
+                      <label class="itemform" for="">Nombre de Usuario: {{ Auth::user()->user }}</h2> </label>
                   </div>
                     <div>
-                      <label class="itemform" for="email">Email: {{-- Auth::user()->email --}}</h2></label>
+                      <label class="itemform" for="email">Email: {{ Auth::user()->email }}</h2></label>
 
                     </div>
                     <div>

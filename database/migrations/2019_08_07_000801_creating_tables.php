@@ -21,6 +21,7 @@ class CreatingTables extends Migration{
            $table->string("country");
            $table->string("state")->nullable();
            $table->string("avatar");
+           $table->smallInteger('is_admin')->default(0);
            $table->rememberToken();
            $table->timestamps();
        });

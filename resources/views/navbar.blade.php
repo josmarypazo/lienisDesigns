@@ -1,6 +1,6 @@
 @php
   use App\Category;
-  $categories = Category::all();    
+  $categories = Category::all();
 @endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <!-- CSRF Token -->

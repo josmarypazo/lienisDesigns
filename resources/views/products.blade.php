@@ -1,3 +1,9 @@
+@if (session('adminError'))
+	<div class="alert alert-danger">
+		{{ session('adminError') }}
+	</div>
+@endif
+
 @extends('base')
 
 @section('pageTitle', 'Productos')
@@ -19,9 +25,13 @@
       </div>
     @endforeach
   </div>
-  {{ $products->links() }}
-  <a href="/products/create" class="btn btn-primary">Crear producto</a>
+          @auth
+							@if (Auth::user()->isAdmin())
+              <!-- {{ $products->links() }} -->
+              <a href="/products/create" class="btn btn-primary">Crear producto</a>
+							@endif
+						@endauth
+
 
 
 @endsection
-

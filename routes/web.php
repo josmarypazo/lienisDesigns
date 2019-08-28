@@ -58,7 +58,7 @@ Route::get("/products/search", "ProductsController@search");
 Route::get("/products/category/{category_id}", "ProductsController@categoria");
 ///products/category/{id}"
 //Ruta a la pagina de crear producto por get
-Route::get("/products/create", "ProductsController@create");
+Route::get("/products/create", "ProductsController@create")->middleware('auth', 'isAdmin');
 
 //Ruta a la pagina de crear producto por post
 Route::post("/products/create", "ProductsController@store");
@@ -67,13 +67,12 @@ Route::post("/products/create", "ProductsController@store");
 Route::get("/products/{id}", "ProductsController@detail");
 
 //Ruta para borrar un producto
-Route::delete("/products/{id}", "ProductsController@destroy");
+Route::delete("/products/{id}", "ProductsController@destroy")->middleware('auth', 'isAdmin');
 
 //Ruta para editar un producto por get
-Route::get("/products/edit/{id}", "ProductsController@edit");
-
+Route::get("/products/edit/{id}", "ProductsController@edit")->middleware('auth', 'isAdmin');
 //Ruta para editar un producto por put
-Route::put("/products/edit/{id}", "ProductsController@update");
+Route::put("/products/edit/{id}", "ProductsController@update")->middleware('auth', 'isAdmin');
 
 //Ruta a la pagina de la compra por post
 Route::get("/products/purchase/{id}", "Product_shopping_CartController@purchase");

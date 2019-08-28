@@ -19,7 +19,6 @@
                 <div class="">
                     <form method="POST" action="/purchase" enctype="multipart/form-data" class="form">
                         @csrf
-_________________________________________
 
 <div class="form-group row">
       <label for="product_id" class="col-md-4 col-form-label text-md-right">Producto</label>
@@ -29,28 +28,14 @@ _________________________________________
 
 <div class="form-group row">
       <label for="quantity" class="col-md-4 col-form-label text-md-right">Cantidad</label>
+      <h3 style="margin: 5 18; color:black; font-weight: bold">{{ $quantity }}</h3>
 
-<div class="col-md-4">
-      <input type="number" class="form-control"
-       name="quantity" value="" autocomplete="" autofocus>
-
-       <form action="">
-         <button class="btn btn-danger" type="submit"><i class="far fa-trash-alt"></i></button>
-       </form>
-       <form action="">
-         <button class="btn btn-warning" type="submit"><i class="fas fa-minus"></i></button>
-       </form>
-       <form action="">
-           <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i></button>
-       </form>
-
-</div>
 </div>
 
 <div class="form-group row">
       <label for="total_purchase"  class="col-md-4 col-form-label text-md-right">Total</label>
 
-<h3 style="margin: 5 18; color:black; font-weight: bold">-</h3>
+<h3 style="margin: 5 18; color:black; font-weight: bold">{{$total_purchase}}</h3>
 </div>
 
 
@@ -67,7 +52,7 @@ _________________________________________
 
           </div>
       </div>
-_________________________________________
+
                     </form>
                   </div>
               </div>

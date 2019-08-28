@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
 use App\product_shoppingCart;
+use App\Http\Middleware\isAdmin;
 
 class ProductsController extends Controller
 {
@@ -21,7 +22,7 @@ class ProductsController extends Controller
   {
     $category = Category::find($category_id);
     $products = $category->products;
-    
+
     return view("productsByCategory", compact('category', 'products'));
   }
 
