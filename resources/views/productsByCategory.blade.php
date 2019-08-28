@@ -1,5 +1,12 @@
 @extends('base')
 
+@section('customStyles')
+  <link rel="stylesheet" href="/css/registro.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+@endsection
+
+
 @section('pageTitle', 'Productos')
 
 @section('mainContent')

@@ -7,18 +7,16 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <link href="css/navbar.css" rel="stylesheet">
-    <!-- Scripts -->
 
     <div class="container-nav">
       <div class="navbar">
-
       <nav class="navbar-expand-md">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <form class="" action="/products/search" method="get">
-          @csrf
+      <form class="" action="/products" method="get">
+        @csrf
         <span><i class="fa fa-search"></i></span>
-        <input class="inputs" type="search" id="search"name="buscador" placeholder="Buscar..." />
+        <input class="inputs" type="search" id="search" name="buscador" placeholder="Buscar..." />
       </form>
 
           </li>
@@ -46,16 +44,16 @@
       <ul class="navbar-nav">
         <!-- Authentication Links -->
         @guest
-          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Registro</a></li>
           <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="/images/user-default.png" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
-              Hola {{ Auth::user()->name }}
+              {{ Auth::users()->fullName }} <img src="{{ Auth::users()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
+
             </a>
             <div class="dropdown-menu" aria-labelledby="dropNavBar">
-              <a class="dropdown-item" href="/profile">Mi perfil</a>
+              <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
               <form action="/logout" method="post">
                 @csrf
                 <button type="submit" class="dropdown-item">Salir</button>
@@ -68,19 +66,19 @@
   </div>
 </nav>
 
-              @auth
+              {{-- @auth
               </nav>
               <nav class=" navbar-expand-lg" style="align-items: flex-end;">
               <li class="nav-item" >
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img name="avatar" src="{{ Auth::user()->avatar }} " width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
+                      <img name="avatar" src="{{ auth::user()->avatar }} " width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropNavBar">
                       <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
                       <a class="dropdown-item" href=" ">Salir</a>
                   </nav>
-              @endauth
+              @endauth --}}
 
           </ul>
       </div>
@@ -88,20 +86,3 @@
     </div>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-
-
-
-
-        						{{-- @auth
-    							@if (Auth::user()->isAdmin())
-    							<a class="dropdown-item" href="/movies/create">Create a movie</a>
-    							@endif
-    						@endauth
-    						<a class="dropdown-item" href="/movies/actors">Actors by movie</a>
-    					</div>
-    				</li>
-    				<li class="nav-item"><a class="nav-link" href="/genres">Genres & Movies</a></li>
-    			</ul>
-
-    			<ul class="navbar-nav ml-auto" style="display: flex; align-items: center;"> --}}

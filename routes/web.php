@@ -57,6 +57,7 @@ Route::get("/products/search", "ProductsController@search");
 //Ruta a la pagina de productos por categoría
 Route::get("/products/category/{category_id}", "ProductsController@categoria");
 ///products/category/{id}"
+
 //Ruta a la pagina de crear producto por get
 Route::get("/products/create", "ProductsController@create")->middleware('auth', 'isAdmin');
 
@@ -71,6 +72,7 @@ Route::delete("/products/{id}", "ProductsController@destroy")->middleware('auth'
 
 //Ruta para editar un producto por get
 Route::get("/products/edit/{id}", "ProductsController@edit")->middleware('auth', 'isAdmin');
+
 //Ruta para editar un producto por put
 Route::put("/products/edit/{id}", "ProductsController@update")->middleware('auth', 'isAdmin');
 

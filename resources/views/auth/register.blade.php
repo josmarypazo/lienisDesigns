@@ -170,7 +170,7 @@
                                 {{ __('Regístrate') }}
                         </button>
 
-                        <button class="cancelar" type="reset" name="Cancelar" class="btn btn-primary">
+                        <button class="cancelar" type="reset" action="reset" name="Cancelar" class="btn btn-primary">
                             {{ __('Cancelar') }}
                         </button>
 
