@@ -22,11 +22,6 @@
       </form>
 
           </li>
-
-        {{-- <li class="nav-item">
-        <a href="#" class="carro"><i class="fas fa-shopping-cart"></i></a>
-        </li> --}}
-
     <li class="nav-item">
       <a class="nav-link" href="/">Inicio</a>
     </li>
@@ -51,31 +46,27 @@
       <ul class="navbar-nav">
         <!-- Authentication Links -->
         @guest
-            <li class="nav-item" >
-              <a class="nav-linkk" href="{{ route('login') }}" user>{{ __('Login') }}</a>
-            </li>
-            @if (Route::has('register'))
-                <li class="nav-item" user>
-                  <a class="nav-linkk" href="{{ route('register') }}" user>{{ __('Registro') }}</a>
-                </li>
-            @endif
+          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
         @else
-      <li class="nav-item dropdown">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->fullName }} <span class="caret"></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                {{ __('Salir') }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="/images/user-default.png" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
+              Hola {{ Auth::user()->name }}
             </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            <div class="dropdown-menu" aria-labelledby="dropNavBar">
+              <a class="dropdown-item" href="/profile">Mi perfil</a>
+              <form action="/logout" method="post">
                 @csrf
-            </form>
-              </div>
-                  </li>
-              @endguest
+                <button type="submit" class="dropdown-item">Salir</button>
+              </form>
+            </div>
+          </li>
+        @endguest
+      </ul>
+    </div>
+  </div>
+</nav>
 
               @auth
               </nav>
@@ -83,7 +74,7 @@
               <li class="nav-item" >
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{-- Auth::user()->avatar --}} /img/img_1353.png" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
+                      <img name="avatar" src="{{ Auth::user()->avatar }} " width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropNavBar">
                       <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
@@ -97,3 +88,20 @@
     </div>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+
+
+
+        						{{-- @auth
+    							@if (Auth::user()->isAdmin())
+    							<a class="dropdown-item" href="/movies/create">Create a movie</a>
+    							@endif
+    						@endauth
+    						<a class="dropdown-item" href="/movies/actors">Actors by movie</a>
+    					</div>
+    				</li>
+    				<li class="nav-item"><a class="nav-link" href="/genres">Genres & Movies</a></li>
+    			</ul>
+
+    			<ul class="navbar-nav ml-auto" style="display: flex; align-items: center;"> --}}

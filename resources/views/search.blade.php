@@ -1,4 +1,6 @@
 @extends('base')
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/footer.css">
 
 @section('pageTitle', 'Resultado de la búsqueda')
 

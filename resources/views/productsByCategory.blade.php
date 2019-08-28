@@ -2,7 +2,6 @@
 
 @section('pageTitle', 'Productos')
 
-
 @section('mainContent')
   <div class="container">
     <h3>{{ $category->name }}</h3>
@@ -20,9 +19,8 @@
       </div>
     @endforeach
   </div>
- 
+
   <a href="/products/create" class="btn btn-primary">Crear producto</a>
 
 
 @endsection
-

@@ -10,7 +10,7 @@
 
               <div class="contenedor">
                 <div class="item">
-                  <img class="imgPerfil" src="{{-- Auth::user()->avatar --}}/img/img_1353.png" width="400" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
+                  <img class="imgPerfil" src=" {{ Auth::user()->avatar }} " width="400" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
                 </div>
                 <div class="item">
                   <form class="formulario">
