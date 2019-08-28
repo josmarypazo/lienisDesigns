@@ -16,6 +16,7 @@
         </div>
 
         <div class="col-xs-12 col-md-8 col-lg-8">
+            <h3> {{ $productToFind->name }}
             <h4>Descripción: {{ $productToFind->description }}</h4>
             <h4>Stock: {{ $productToFind->stock }}</h4>
             <h4>Puntuación: {{ $productToFind->rating }} </h4>

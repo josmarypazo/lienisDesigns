@@ -1,4 +1,7 @@
-
+@php
+  use App\Category;
+  $categories = Category::all();    
+@endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -25,7 +28,7 @@
         </li> --}}
 
     <li class="nav-item">
-      <a class="nav-link" href="/index">Inicio</a>
+      <a class="nav-link" href="/">Inicio</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/quiensoy">¿Quién soy?</a>
@@ -38,11 +41,10 @@
         Productos
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/products">Collares</a>
-        <a class="dropdown-item" href="/products">Minibags</a>
-        <a class="dropdown-item" href="/products">Para ellos</a>
-        <a class="dropdown-item" href="/products">Pulseras</a>
-        <a class="dropdown-item" href="/products">Zarcillos</a>
+      <a class="dropdown-item" href="/products">Todos</a>
+        @foreach ($categories as $category)
+            <a class="dropdown-item" href="/products/category/{{ $category->id }}">{{ $category->name }}</a>
+        @endforeach
       </div>
     </li>
 

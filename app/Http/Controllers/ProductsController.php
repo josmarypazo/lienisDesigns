@@ -11,10 +11,18 @@ class ProductsController extends Controller
 {
   public function list()
   {
-    $products = Product::all();
+    $products = Product::paginate(3);
     $vac = compact("products");
 
-    return view("products", $vac);
+    return view("products", $vac)->withProducts($products);
+  }
+
+  public function categoria($category_id)
+  {
+    $category = Category::find($category_id);
+    $products = $category->products;
+    
+    return view("productsByCategory", compact('category', 'products'));
   }
 
   public function create()
@@ -94,7 +102,7 @@ class ProductsController extends Controller
   }
 
   public function search(){
-    $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
+    $products = Product::where("category", "LIKE", "%" . $_GET['buscador'] . "%")
     ->get();
     return view("search", compact("products"));
   }

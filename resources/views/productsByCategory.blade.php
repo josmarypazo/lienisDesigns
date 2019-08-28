@@ -5,6 +5,7 @@
 
 @section('mainContent')
   <div class="container">
+    <h3>{{ $category->name }}</h3>
     @foreach ($products as $product)
       <div class="col-xs-12 col-md-6 col-lg-4" style="padding:5px">
         <div class="unProducto" style="background-color: rgba(234, 250, 241, 0.23); border-radius: 15px;">
@@ -19,7 +20,7 @@
       </div>
     @endforeach
   </div>
-  {{ $products->links() }}
+ 
   <a href="/products/create" class="btn btn-primary">Crear producto</a>
 
 

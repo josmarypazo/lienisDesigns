@@ -65,7 +65,7 @@
         <div class="form-group">
           <br>
           <button class="registro" type="submit" name="crear" value="">Crear</button>
-          <button class="cancelar" type="reset" name="Cancelar" value="">Cancelar</button>
+          <a href="/products" class="cancelar">Cancelar</a>
         </div>
       </div>
     </div>
