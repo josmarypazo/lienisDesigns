@@ -27,7 +27,7 @@
   </div>
           @auth
 							@if (Auth::user()->isAdmin())
-              <!-- {{ $products->links() }} -->
+              {{ $products->links() }}
               <a href="/products/create" class="btn btn-primary">Crear producto</a>
 							@endif
 						@endauth

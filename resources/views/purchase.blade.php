@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/footer.css">
 
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @section('mainContent')
-<body>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -17,7 +16,7 @@
                 <div class="title" style="text-align: center">DETALLE DE TU COMPRA</div>
 
                 <div class="">
-                    <form method="POST" action="/purchase" enctype="multipart/form-data" class="form">
+                    <form method="POST" enctype="multipart/form-data" class="form">
                         @csrf
 
 <div class="form-group row">
@@ -42,11 +41,11 @@
 
 <div class="form-group row mb-0">
   <div class="col-md-4 offset-md-4">
-  <button class="registro" style="font-weight: bold" type="submit" name="cancelar" class="btn btn-primary">
+  <button class="registro" style="font-weight: bold" type="submit" name="comprar">
           {{ __('Confirmar compra') }}
   </button>
 
-  <button class="cancelar" type="reset" name="listo" class="btn btn-primary">
+  <button class="cancelar" type="reset" name="cancelar">
       {{ __('Cancelar') }}
   </button>
 
@@ -60,5 +59,5 @@
         </div>
       </div>
 
-</body>
+<script src="/js/purchase.js"></script>
 @endsection

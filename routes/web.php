@@ -51,6 +51,8 @@ Route::get("/perfil_usuario", function() {
 //Ruta a la pagina de productos
 Route::get("/products", "ProductsController@list");
 
+Route::post("/products/purchase/{id}", "ProductsController@purchase");
+
 //Ruta al buscador
 Route::get("/products/search", "ProductsController@search");
 

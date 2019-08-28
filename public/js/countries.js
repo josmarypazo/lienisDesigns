@@ -48,9 +48,9 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 
 //Persistiendo el country
-var formulario = document.querySelector(".form");
-var select = document.getElementById("country");
-
-select.addEventListener("change", function(){
-	this.options[this.selectedIndex] == select.name;
-});
+// var formulario = document.querySelector(".form");
+// var select = document.getElementById("country");
+//
+// select.addEventListener("change", function(){
+// 	this.options[this.selectedIndex] == select.name;
+// });

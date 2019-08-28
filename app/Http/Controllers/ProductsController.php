@@ -122,4 +122,8 @@ class ProductsController extends Controller
   // 		return redirect('/perfil_usuario');
   // 	}
 
+  public function purchase(){
+    return redirect("/products");
+  }
+
 }
