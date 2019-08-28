@@ -12,19 +12,15 @@
 */
 
 //RUTA, CONTROLADOR VISTA
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //Ruta a la pagina de inicio
-Route::get("/index", function() {
+Route::get("/", function() {
 return view('index');
 });
 
-//Ruta a la pagina de productos
-Route::get("/products", function() {
-return view('products');
-});
 
 //Ruta a la pagina de productos
 Route::get("/login", function() {
@@ -58,6 +54,9 @@ Route::get("/products", "ProductsController@list");
 //Ruta al buscador
 Route::get("/products/search", "ProductsController@search");
 
+//Ruta a la pagina de productos por categoría
+Route::get("/products/category/{category_id}", "ProductsController@categoria");
+///products/category/{id}"
 //Ruta a la pagina de crear producto por get
 Route::get("/products/create", "ProductsController@create");
 
