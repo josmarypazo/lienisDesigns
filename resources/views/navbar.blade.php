@@ -38,6 +38,11 @@
         @foreach ($categories as $category)
             <a class="dropdown-item" href="/products/category/{{ $category->id }}">{{ $category->name }}</a>
         @endforeach
+      @auth
+        @if (Auth::user()->isAdmin())
+        <a class="dropdown-item" href="/products/create">Crear producto</a>
+        @endif
+      @endauth
       </div>
     </li>
 
