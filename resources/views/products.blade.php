@@ -28,11 +28,6 @@
   {{ $products->links() }}
           @auth
 							@if (Auth::user()->isAdmin())
-<<<<<<< HEAD
-              <!-- -->
-=======
-              {{ $products->links() }}
->>>>>>> 1b1b2ff826f381b47955b1de6b627f9a4372e6ef
               <a href="/products/create" class="btn btn-primary">Crear producto</a>
 							@endif
 						@endauth
