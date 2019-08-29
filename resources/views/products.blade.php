@@ -25,9 +25,10 @@
       </div>
     @endforeach
   </div>
+  {{ $products->links() }}
           @auth
 							@if (Auth::user()->isAdmin())
-              <!-- {{ $products->links() }} -->
+              <!-- -->
               <a href="/products/create" class="btn btn-primary">Crear producto</a>
 							@endif
 						@endauth
