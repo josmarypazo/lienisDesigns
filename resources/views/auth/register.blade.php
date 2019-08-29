@@ -170,6 +170,7 @@
                                 {{ __('Regístrate') }}
                         </button>
 
+                        <input type="reset" name="" value="">
                         <button class="cancelar" type="reset" action="reset" name="Cancelar" class="btn btn-primary">
                             {{ __('Cancelar') }}
                         </button>
