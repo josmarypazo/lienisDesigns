@@ -30,7 +30,7 @@
 
                     </div>
                     <div class="butt">
-                      <button action="/perfil_usuario/edit" class="button" type="submit" name="button">Editar Información</button>
+                      <button action="/perfil_usuario/edit/{id}" class="button" type="submit" name="button">Editar Información</button>
                     </div>
                   </form>
                 </div>

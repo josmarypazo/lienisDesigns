@@ -43,6 +43,7 @@
           <button class="cancelar" type="reset" name="cancelar" value="">Cancelar</button>
         </div>
       </div>
+      </form>
     </div>
-  </form>
+
 @endsection

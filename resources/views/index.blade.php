@@ -4,7 +4,7 @@
 
         @section('mainContent')
 <!-- carousel -->
-<div class="container-carousel-Fluid-Row">
+<div class="container-carousel" style="margin-top:30px;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -48,28 +48,19 @@
 
 <!-- productos -->
 <div class="tendencias">
-  <h2>LOS MÁS VENDIDOS</h2>
+  <h2>TENDENCIAS 2019</h2>
 </div>
 <div class="fotos">
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1353.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/collar4.jpg" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1354.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/pulsera1.png" alt="Imagen del producto" width="100%" height="100%">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
+        <img class="foto" src="img/zarcillos1.jpg" alt="Imagen del producto" width="100%" height="100%">
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1356.png" alt="Imagen del producto" width="100%" height="100%">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1358.png" alt="Imagen del producto" width="100%" height="100%">
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <img class="foto" src="img/img_1362.png" alt="Imagen del producto" width="100%" height="100%">
-      </div>
-      </div>
+            </div>
       @section('customStyles')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

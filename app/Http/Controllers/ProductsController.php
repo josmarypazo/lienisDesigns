@@ -103,9 +103,9 @@ class ProductsController extends Controller
   }
 
   public function search(){
-    $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
+    $products = Product::where("category_id", "LIKE", "%" . $_GET['buscador'] . "%")
     ->get();
-    return view("search", compact("products"));
+    return view("/products/search", compact("products"));
   }
 
 

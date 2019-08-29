@@ -4,11 +4,12 @@ display: flex;
 align-items: center;
 width: 100%;
 justify-content: center;
-margin: 15px 0 15px;
+/* margin: 30px 0 30px; */
 background-color: rgba(234, 250, 241, 0.43);
 color: RGB(46, 139, 87);
+margin-bottom: 30px;
+margin-top: 20px;
    }
-
 
 .nav-linkf i, .nav-itemf  {
   flex-wrap: nowrap;
@@ -25,8 +26,8 @@ color: RGB(46, 139, 87);
      align-items: center;
    }
 
-         @media (min-width:768px) {
-           h3 {
-              font-size: 24px;
-           }
+       @media (min-width:768px) {
+         h3 {
+            font-size: 24px;
+         }
    }

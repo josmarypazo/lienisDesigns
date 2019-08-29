@@ -70,6 +70,13 @@ li { align-items: center;}
 
  .dropdown-menu { background-color: rgba(234, 250, 241, 0.43);}
 
+ .contraseña {
+  	background-color: RGB(46, 139, 87);
+  	font-weight: bold;
+  	padding: 5px;
+  	margin-top: 20px;
+  	color: white;
+  }
 
  @media (min-width:768px) {
    .navbar{ font-size: 16px; }

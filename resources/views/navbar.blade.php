@@ -13,7 +13,7 @@
       <nav class="navbar-expand-md">
     <ul class="navbar-nav">
       <li class="nav-item">
-      <form class="" action="/products" method="get">
+      <form class="" action="/products/search" method="get">
         @csrf
         <span><i class="fa fa-search"></i></span>
         <input class="inputs" type="search" id="search" name="buscador" placeholder="Buscar..." />
