@@ -30,7 +30,12 @@
 
                     </div>
                     <div class="butt">
+<<<<<<< HEAD
                       <button action="/perfil_usuario/edit/{id}" class="button" type="submit" name="button">Editar Información</button>
+=======
+
+                      <button action="/perfil_usuario/edit" class="button" type="submit" name="button">Editar Información</button>
+>>>>>>> b0c3cb5f24a09a45094b2648da22f82c0916c28e
                     </div>
                   </form>
                 </div>

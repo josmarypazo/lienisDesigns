@@ -93,7 +93,7 @@ class ProductsController extends Controller
     $finalImage = uniqid("img_") . "." . $productToUpdate->image->extension();
 
     //Subimos el archivo en la carpeta public/img
-    $productToUpdate->image->storePubliclyAs("public/img", $finalImage);
+    $productToUpdate->image->storePubliclyAs("/public/img", $finalImage);
 
     //Asignamos la imagen al producto que guardamos
     $productToUpdate->image = $finalImage;
@@ -103,10 +103,11 @@ class ProductsController extends Controller
   }
 
   public function search(){
-    $products = Product::where("category_id", "LIKE", "%" . $_GET['buscador'] . "%")
+    $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
     ->get();
-    return view("/products/search", compact("products"));
+    return view("search", compact("products"));
   }
+
 
 
   // $userSaved = user::create($request->all());
