@@ -103,9 +103,27 @@ class ProductsController extends Controller
   }
 
   public function search(){
-    $products = Product::where("category", "LIKE", "%" . $_GET['buscador'] . "%")
+    $products = Product::where("name", "LIKE", "%" . $_GET['buscador'] . "%")
     ->get();
     return view("search", compact("products"));
+  }
+
+
+  // $userSaved = user::create($request->all());
+  // 		$imagen = $request["avatar"];
+  // 		// Armo un nombre único para este archivo
+  // 		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
+  // 		// Subo el archivo en la carpeta elegida
+  // 		$imagen->storePubliclyAs("public/storage", $imagenFinal);
+  // 		// Le asigno la imagen al usuario guardado
+  // 		$userSaved->avatar = $imagenFinal;
+  // 		$userSaved->save();
+  // 		// Redireccionamos
+  // 		return redirect('/perfil_usuario');
+  // 	}
+
+  public function purchase(){
+    return redirect("/products");
   }
 
 }

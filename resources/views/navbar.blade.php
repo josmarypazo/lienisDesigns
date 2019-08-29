@@ -7,26 +7,19 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <link href="css/navbar.css" rel="stylesheet">
-    <!-- Scripts -->
 
     <div class="container-nav">
       <div class="navbar">
-
       <nav class="navbar-expand-md">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <form class="" action="/products/search" method="get">
-          @csrf
+      <form class="" action="/products" method="get">
+        @csrf
         <span><i class="fa fa-search"></i></span>
-        <input class="inputs" type="search" id="search"name="buscador" placeholder="Buscar..." />
+        <input class="inputs" type="search" id="search" name="buscador" placeholder="Buscar..." />
       </form>
 
           </li>
-
-        {{-- <li class="nav-item">
-        <a href="#" class="carro"><i class="fas fa-shopping-cart"></i></a>
-        </li> --}}
-
     <li class="nav-item">
       <a class="nav-link" href="/">Inicio</a>
     </li>
@@ -51,45 +44,41 @@
       <ul class="navbar-nav">
         <!-- Authentication Links -->
         @guest
-            <li class="nav-item" >
-              <a class="nav-linkk" href="{{ route('login') }}" user>{{ __('Login') }}</a>
-            </li>
-            @if (Route::has('register'))
-                <li class="nav-item" user>
-                  <a class="nav-linkk" href="{{ route('register') }}" user>{{ __('Registro') }}</a>
-                </li>
-            @endif
+          <li class="nav-item"><a class="nav-link" href="/register">Registro</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
         @else
-      <li class="nav-item dropdown">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->fullName }} <span class="caret"></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                {{ __('Salir') }}
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-              </div>
-                  </li>
-              @endguest
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ Auth::users()->fullName }} <img src="{{ Auth::users()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
 
-              @auth
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropNavBar">
+              <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
+              <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item">Salir</button>
+              </form>
+            </div>
+          </li>
+        @endguest
+      </ul>
+    </div>
+  </div>
+</nav>
+
+              {{-- @auth
               </nav>
               <nav class=" navbar-expand-lg" style="align-items: flex-end;">
               <li class="nav-item" >
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{-- Auth::user()->avatar --}} /img/img_1353.png" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
+                      <img name="avatar" src="{{ auth::user()->avatar }} " width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropNavBar">
                       <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
                       <a class="dropdown-item" href=" ">Salir</a>
                   </nav>
-              @endauth
+              @endauth --}}
 
           </ul>
       </div>
