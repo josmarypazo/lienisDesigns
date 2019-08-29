@@ -29,11 +29,12 @@
             <h4>Precio: ${{ $productToFind->price }}</h4>
 
                 <form action="/products/{{ $productToFind->id }}" method="POST" style="display:inline">
-            <a href="/products/purchase/{{ $productToFind->id }}" class="btn btn-success">COMPRAR</a>
 
             @auth
+													<a href="/products/purchase/{{ $productToFind->id }}" class="btn btn-success">COMPRAR</a>
             							@if (Auth::user()->isAdmin())
             							@csrf
+
                           {{ method_field("delete") }}
                           <button type="submit" class="btn btn-danger">BORRAR</button>
                           <a href="/products/edit/{{ $productToFind->id }}" class="btn badge-warning">EDITAR</a>
