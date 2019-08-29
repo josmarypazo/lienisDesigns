@@ -30,6 +30,7 @@
 
                     </div>
                     <div class="butt">
+
                       <button action="/perfil_usuario/edit" class="button" type="submit" name="button">Editar Información</button>
                     </div>
                   </form>

@@ -107,6 +107,7 @@ class ProductsController extends Controller
     ->get();
     return view("search", compact("products"));
   }
+}
 
 
   // $userSaved = user::create($request->all());
@@ -122,8 +123,8 @@ class ProductsController extends Controller
   // 		return redirect('/perfil_usuario');
   // 	}
 
-  public function purchase(){
-    return redirect("/products");
-  }
-
-}
+//   public function purchase(){
+//     return redirect("/products");
+//   }
+//
+// }
