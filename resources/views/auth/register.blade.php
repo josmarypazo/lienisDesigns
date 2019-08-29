@@ -8,11 +8,11 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @section('mainContent')
-    @if ($errors)
+    {{-- @if ($errors)
       @foreach ($errors->all() as $oneError)
       <p>{{ $oneError }}</p>
       @endforeach
-    @endif
+    @endif --}}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
