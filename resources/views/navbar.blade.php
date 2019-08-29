@@ -49,7 +49,7 @@
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ Auth::user()->fullName }} <img src="{{ Auth::user()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
+              {{ Auth::user()->fullName }} <img src="/storage/img/{{ Auth::user()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropNavBar">

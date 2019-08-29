@@ -44,7 +44,7 @@ class ProductsController extends Controller
     $finalImage = uniqid("img_") . "." . $image->extension();
 
     //Subimos el archivo en la carpeta public/img
-    $image->storePubliclyAs("public/img", $finalImage);
+    $image->storePubliclyAs("/storage//img", $finalImage);
 
     //Asignamos la imagen al producto que guardamos
     $productSaved->image = $finalImage;

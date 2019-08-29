@@ -85,12 +85,13 @@ class RegisterController extends Controller
       **/
     protected function create(array $data)
     {
-        return User::create([
 
-          // $ruta = $data->file("avatar")->store("public"),
-          // nos da la ruta entera donde se va a guardar el archivo
-          // $nombreArchivo = basename($ruta),
-          //para que recorte la ruta y de el nombre nada mas
+      $request = request();
+      $avatar = $request["avatar"];
+      $nombreAvatar = uniqid($request['email']. "-"). "." . $avatar->extension();
+      $avatar->storePubliclyAs("/storage/img",$nombreAvatar);
+
+        return User::create([
 
             'fullName'=> $data['fullName'],
             'user'=>$data['user'],
@@ -99,10 +100,18 @@ class RegisterController extends Controller
             'password'=> Hash::make($data['password']),
             'country'=>$data['country'],
             'state'=> isset($data['state']) ? $data['state'] : null,
-            'avatar'=>$data['avatar'],
+            'avatar'=>$nombreAvatar,
+
 // 'avatar'=>$data['avatar'] = $nombreArchivo,
+// $ruta = $data->file("avatar")->store("public"),
+// nos da la ruta entera donde se va a guardar el archivo
+// $nombreArchivo = basename($ruta),
+//para que recorte la ruta y de el nombre nada mas
 
 
         ]);
     }
+
+
+
 }
