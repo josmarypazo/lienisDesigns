@@ -63,3 +63,9 @@ align-items: center;}
  margin-top: 40px;
  color: white;
 }
+
+.invalid {
+	display: none;
+	color: red;
+	font-size: 15px;
+}
