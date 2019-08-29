@@ -8,7 +8,6 @@
 
 @section('pageTitle', 'Productos')
 
-
 @section('mainContent')
   <div class="container">
     @foreach ($products as $product)
@@ -25,18 +24,19 @@
       </div>
     @endforeach
   </div>
-  {{ $products->links() }}
+
+<div class="links" style="color: RGB(46, 139, 87)">
+	{{ $products->links() }}
+</div>
+
+
           @auth
 							@if (Auth::user()->isAdmin())
-<<<<<<< HEAD
-              <!-- -->
-=======
-              {{ $products->links() }}
->>>>>>> 1b1b2ff826f381b47955b1de6b627f9a4372e6ef
               <a href="/products/create" class="btn btn-primary">Crear producto</a>
 							@endif
 						@endauth
 
-
-
 @endsection
+
+ {{-- { color: RGB(46, 139, 87);
+background-color: rgba(234, 250, 241, 0.43);   } --}}
