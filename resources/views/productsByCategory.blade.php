@@ -27,7 +27,7 @@
     @endforeach
   </div>
 
-  <a href="/products/create" class="btn btn-primary">Crear producto</a>
+  {{-- <a href="/products/create" class="btn btn-primary">Crear producto</a> --}}
 
 
 @endsection

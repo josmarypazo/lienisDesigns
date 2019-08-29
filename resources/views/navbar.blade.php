@@ -49,7 +49,7 @@
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ Auth::users()->fullName }} <img src="{{ Auth::users()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
+              {{ Auth::user()->fullName }} <img src="{{ Auth::user()->avatar }}" width="40" style="border-radius: 50%; background-color: #ffffff; padding: 5px;">
 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropNavBar">
@@ -65,24 +65,4 @@
     </div>
   </div>
 </nav>
-
-              {{-- @auth
-              </nav>
-              <nav class=" navbar-expand-lg" style="align-items: flex-end;">
-              <li class="nav-item" >
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropNavBar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img name="avatar" src="{{ auth::user()->avatar }} " width="40" style="border-radius: 50%; background-color: #ffffff; padding: 3px;">
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropNavBar">
-                      <a class="dropdown-item" href="/perfil_usuario">Mi perfil</a>
-                      <a class="dropdown-item" href=" ">Salir</a>
-                  </nav>
-              @endauth --}}
-
-          </ul>
-      </div>
-        </nav>
-    </div>
-    </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
