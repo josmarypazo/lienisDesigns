@@ -29,12 +29,12 @@
 	{{ $products->links() }}
 </div>
 
-
+{{--
           @auth
 							@if (Auth::user()->isAdmin())
               <a href="/products/create" class="btn btn-primary">Crear producto</a>
 							@endif
-						@endauth
+						@endauth --}}
 
 @endsection
 

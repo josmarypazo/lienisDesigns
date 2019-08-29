@@ -4,7 +4,7 @@
 
         @section('mainContent')
 <!-- carousel -->
-<div class="container-carousel">
+<div class="container-carousel-Fluid-Row">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">

@@ -81,6 +81,12 @@ Route::put("/products/edit/{id}", "ProductsController@update")->middleware('auth
 //Ruta a la pagina de la compra por post
 Route::get("/products/purchase/{id}", "Product_shopping_CartController@purchase");
 
+//Ruta para editar perfil usuario
+Route::get("/perfil_usuario/edit/{id}", "ProfileController@edit");
+
+//Ruta para editar perfil usuario
+Route::put("/perfil_usuario/edit/{id}", "ProfileController@update");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
