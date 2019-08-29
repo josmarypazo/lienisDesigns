@@ -89,7 +89,7 @@ class RegisterController extends Controller
       $request = request();
       $avatar = $request["avatar"];
       $nombreAvatar = uniqid($request['email']. "-"). "." . $avatar->extension();
-      $avatar->storePubliclyAs("/storage/img",$nombreAvatar);
+      $avatar->storePubliclyAs("/public/img",$nombreAvatar);
 
         return User::create([
 
