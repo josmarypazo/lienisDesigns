@@ -46,7 +46,7 @@
   </button>
 
 
-  <button class="cancelar" action="/products" type="reset" name="cancelar">
+  <button class="cancelar" action="/products" type="submit" name="cancelar">
       {{ __('Cancelar') }}
   </button>
 

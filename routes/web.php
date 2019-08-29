@@ -22,15 +22,12 @@ return view('index');
 });
 
 
-//Ruta a la pagina de productos
+//Ruta a la pagina de login
 Route::get("/login", function() {
 return view('login');
 });
 
-//Ruta a la pagina de productos
-Route::get("/registro", function() {
-return view('registro');
-});
+
 
 //Ruta a la pagina de preguntas frecuentes
 Route::get("/faq", function() {

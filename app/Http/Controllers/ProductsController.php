@@ -44,7 +44,7 @@ class ProductsController extends Controller
     $finalImage = uniqid("img_") . "." . $image->extension();
 
     //Subimos el archivo en la carpeta public/img
-    $image->storePubliclyAs("/storage//img", $finalImage);
+    $image->storePubliclyAs("/public/img", $finalImage);
 
     //Asignamos la imagen al producto que guardamos
     $productSaved->image = $finalImage;
@@ -108,20 +108,6 @@ class ProductsController extends Controller
     return view("search", compact("products"));
   }
 
-
-
-  // $userSaved = user::create($request->all());
-  // 		$imagen = $request["avatar"];
-  // 		// Armo un nombre único para este archivo
-  // 		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
-  // 		// Subo el archivo en la carpeta elegida
-  // 		$imagen->storePubliclyAs("public/storage", $imagenFinal);
-  // 		// Le asigno la imagen al usuario guardado
-  // 		$userSaved->avatar = $imagenFinal;
-  // 		$userSaved->save();
-  // 		// Redireccionamos
-  // 		return redirect('/perfil_usuario');
-  // 	}
 
   public function purchase(){
     return redirect("/products");

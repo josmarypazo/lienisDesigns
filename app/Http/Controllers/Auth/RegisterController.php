@@ -104,11 +104,7 @@ class RegisterController extends Controller
             'state'=> isset($data['state']) ? $data['state'] : null,
             'avatar'=>$nombreAvatar,
 
-// 'avatar'=>$data['avatar'] = $nombreArchivo,
-// $ruta = $data->file("avatar")->store("public"),
-// nos da la ruta entera donde se va a guardar el archivo
-// $nombreArchivo = basename($ruta),
-//para que recorte la ruta y de el nombre nada mas
+
 
 
         ]);

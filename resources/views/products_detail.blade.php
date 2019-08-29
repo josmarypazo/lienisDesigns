@@ -18,7 +18,7 @@
   <div class="container">
     <div>
         <div class="col-xs-12 col-md-4 col-lg-4">
-            <img src="/storage/img/{{ $productToFind->image }}" alt="Imagen del producto" width="0%"  style="border-radius:5%">
+            <img src="/storage/img/{{ $productToFind->image }}" alt="Imagen del producto" width="90%" height="" style="border-radius:5%">
         </div>
 
         <div class="col-xs-12 col-md-8 col-lg-8">

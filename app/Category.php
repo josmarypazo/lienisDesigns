@@ -9,7 +9,7 @@ class Category extends Model
     //Se definen cuáles son las columnas que se pueden escribir
     protected $fillable = ['name'];
 
-    //Se aclara la relación (AGREGUE la s a product Mati)
+    //Se aclara la relación 
     public function products() {
       return $this->hasMany(Product::class);
     }
