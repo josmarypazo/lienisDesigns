@@ -1,3 +1,16 @@
+Lienis Designs
+
+E-commerce de bisutería desarrollado en el marco del curso desarollo Web Full Stack en Digital House por:
+- Matías Chillo
+- Maribel Claros
+- Josmary Pazo
+- Analía Rossoti
+
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
